@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MAISON ÉLAN — Fashion & Design Academy. Admissions, Atelier Visits & Inquiries Shell." />
+    <title>MAISON ÉLAN | Fashion & Design Academy — Contact</title>
+
+    <!-- Anti-flicker critical script: applies saved theme and direction prior to DOM rendering -->
+    <script>
+      (function () {
+        try {
+          const storedTheme = localStorage.getItem('maison-elan-theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = storedTheme === 'dark' || (!storedTheme && prefersDark) ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          const storedDir = localStorage.getItem('maison-elan-dir') || 'ltr';
+          document.documentElement.setAttribute('dir', storedDir);
+          document.documentElement.dir = storedDir;
+        } catch (e) {
+          console.warn('Initial theme/dir load error', e);
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts Preconnect & High-Performance Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled Tailwind CSS v4 Stylesheet -->
+    <link rel="stylesheet" href="./css/output.css" />
+
+    <!-- Application Script Entry Point -->
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-bg-primary text-text-primary antialiased flex flex-col">
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header (Public Variant - Contact Active) -->
+    <header id="site-header" data-variant="public" data-active-page="contact"></header>
+
+    <!-- Main Content Shell -->
+    <main id="main-content" class="flex-1 py-16 sm:py-24">
+      <div class="container-standard space-y-16">
+        <!-- Page Identifier -->
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <span class="text-editorial-caption">PHASE 2 — GLOBAL COMPONENTS</span>
+          <h1 class="text-editorial-h1 font-serif text-text-primary">Contact & Atelier Inquiries</h1>
+          <p class="text-text-secondary text-body leading-relaxed">
+            Admissions inquiries, academy visits, and global relations shell with shared navigation and footer.
+          </p>
+        </div>
+
+        <section aria-labelledby="contact-shell-heading" class="card-editorial space-y-6">
+          <div class="border-b border-border-subtle pb-4">
+            <h2 id="contact-shell-heading" class="text-xl font-serif font-bold text-text-primary">
+              Global Component Integration
+            </h2>
+            <p class="text-sm text-text-secondary mt-1">
+              "Contact" link in the global header is actively highlighted via CSS logical borders and aria-current="page".
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-bg-surface-elevated border border-border-subtle rounded-xs space-y-2">
+              <span class="font-serif font-bold text-base block text-text-primary">Official Admissions Office</span>
+              <p class="text-sm text-text-secondary">Direct all portfolio submissions and interview requests to our admissions coordinators.</p>
+              <a href="mailto:hello@maisonelan.example" class="btn-link">
+                <span>Email Admissions</span> &rarr;
+              </a>
+            </div>
+
+            <div class="p-6 bg-bg-surface-elevated border border-border-subtle rounded-xs space-y-2">
+              <span class="font-serif font-bold text-base block text-text-primary">Private Atelier Tours</span>
+              <p class="text-sm text-text-secondary">Private walkthroughs of the garment construction ateliers and fabrication labs.</p>
+              <a href="tel:+919000000000" class="btn-link">
+                <span>Call Atelier Reception</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer (Public Variant) -->
+    <footer id="site-footer" data-variant="public"></footer>
+  </body>
+</html>

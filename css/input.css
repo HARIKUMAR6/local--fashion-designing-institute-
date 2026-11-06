@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@source "../**/*.{html,js}";
+@import "./tokens.css";
+@import "./base.css";
+@import "./utilities.css";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --color-brand-midnight: #171717;
+  --color-brand-ivory: #F4F0E8;
+  --color-brand-taupe: #B79A78;
+  --color-brand-burgundy: #7B263A;
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-surface-elevated: var(--bg-surface-elevated);
+  --color-bg-surface-muted: var(--bg-surface-muted);
+  --color-bg-inverse: var(--bg-inverse);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-accent: var(--text-accent);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-medium: var(--border-medium);
+  --color-border-strong: var(--border-strong);
+  --color-border-accent: var(--border-accent);
+}

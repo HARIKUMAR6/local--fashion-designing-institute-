@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MAISON ÉLAN — Fashion & Design Academy. Home 2: Runway & Haute Couture Showcase Shell." />
+    <title>MAISON ÉLAN | Fashion & Design Academy — Home 2</title>
+
+    <!-- Anti-flicker critical script: applies saved theme and direction prior to DOM rendering -->
+    <script>
+      (function () {
+        try {
+          const storedTheme = localStorage.getItem('maison-elan-theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = storedTheme === 'dark' || (!storedTheme && prefersDark) ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          const storedDir = localStorage.getItem('maison-elan-dir') || 'ltr';
+          document.documentElement.setAttribute('dir', storedDir);
+          document.documentElement.dir = storedDir;
+        } catch (e) {
+          console.warn('Initial theme/dir load error', e);
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts Preconnect & High-Performance Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled Tailwind CSS v4 Stylesheet -->
+    <link rel="stylesheet" href="./css/output.css" />
+
+    <!-- Application Script Entry Point -->
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-bg-primary text-text-primary antialiased flex flex-col">
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header (Public Variant - Home 2 Active) -->
+    <header id="site-header" data-variant="public" data-active-page="home-2"></header>
+
+    <!-- Main Content Shell -->
+    <main id="main-content" class="flex-1 py-16 sm:py-24">
+      <div class="container-standard space-y-16">
+        <!-- Page Identifier -->
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <span class="text-editorial-caption">PHASE 2 — GLOBAL COMPONENTS</span>
+          <h1 class="text-editorial-h1 font-serif text-text-primary">Home 2: Haute Couture Showcase</h1>
+          <p class="text-text-secondary text-body leading-relaxed">
+            Alternate homepage entry point verifying shared navigation active states, Home dropdown hierarchy, and bidirectional alignment.
+          </p>
+        </div>
+
+        <!-- Shared Component & Button Verification -->
+        <section aria-labelledby="home2-controls-heading" class="card-editorial space-y-6">
+          <div class="border-b border-border-subtle pb-4">
+            <h2 id="home2-controls-heading" class="text-xl font-serif font-bold text-text-primary">
+              Interactive Component State Verification
+            </h2>
+            <p class="text-sm text-text-secondary mt-1">
+              Verify that clicking the Home dropdown activates "Home 2" with appropriate aria-current and border indicator.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="courses.html" class="btn-primary">
+              View Atelier Programs
+            </a>
+            <a href="gallery.html" class="btn-secondary">
+              Explore Collections
+            </a>
+            <a href="contact.html" class="btn-outline">
+              Request Atelier Tour
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer (Public Variant) -->
+    <footer id="site-footer" data-variant="public"></footer>
+  </body>
+</html>

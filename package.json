@@ -1,0 +1,16 @@
+{
+  "name": "maison-elan",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MAISON ÉLAN — Fashion & Design Academy Website",
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/output.css --minify",
+    "watch": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.9",
+    "tailwindcss": "^4.0.9"
+  }
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" class="maison-elan-emblem" aria-hidden="true">
+  <!-- Outer hairline frame -->
+  <rect x="6" y="6" width="88" height="88" rx="1.5" fill="none" stroke="#F4F0E8" stroke-width="0.75" stroke-opacity="0.35"/>
+  
+  <!-- Inner atelier octagonal border -->
+  <path d="M 20,11 L 80,11 L 89,20 L 89,80 L 80,89 L 20,89 L 11,80 L 11,20 Z" fill="none" stroke="#F4F0E8" stroke-width="1.25" stroke-opacity="0.85"/>
+
+  <!-- Four cardinal atelier diamonds -->
+  <polygon points="50,7.5 52,9.5 50,11.5 48,9.5" fill="#F4F0E8" opacity="0.75"/>
+  <polygon points="50,88.5 52,90.5 50,92.5 48,90.5" fill="#F4F0E8" opacity="0.75"/>
+  <polygon points="7.5,50 9.5,52 11.5,50 9.5,48" fill="#F4F0E8" opacity="0.75"/>
+  <polygon points="88.5,50 90.5,52 92.5,50 90.5,48" fill="#F4F0E8" opacity="0.75"/>
+
+  <!-- Corner flourishes -->
+  <line x1="16" y1="21" x2="21" y2="16" stroke="#F4F0E8" stroke-width="0.65" stroke-opacity="0.45"/>
+  <line x1="84" y1="21" x2="79" y2="16" stroke="#F4F0E8" stroke-width="0.65" stroke-opacity="0.45"/>
+  <line x1="16" y1="79" x2="21" y2="84" stroke="#F4F0E8" stroke-width="0.65" stroke-opacity="0.45"/>
+  <line x1="84" y1="79" x2="79" y2="84" stroke="#F4F0E8" stroke-width="0.65" stroke-opacity="0.45"/>
+
+  <!-- Haute Couture Monogram M & E -->
+  <!-- Letter M: Left Pillar -->
+  <path d="M 21,27 L 31,27 L 31,29.5 L 28,30 L 28,70 L 31,70.5 L 31,73 L 21,73 L 21,70.5 L 24,70 L 24,30 L 21,29.5 Z" fill="#F4F0E8"/>
+
+  <!-- Letter M: Right Pillar -->
+  <path d="M 69,27 L 79,27 L 79,29.5 L 76,30 L 76,70 L 79,70.5 L 79,73 L 69,73 L 69,70.5 L 72,70 L 72,30 L 69,29.5 Z" fill="#F4F0E8"/>
+
+  <!-- Letter M: Diagonals -->
+  <!-- Left thick diagonal -->
+  <polygon points="25.5,30 31,30 50,67 44.5,67" fill="#F4F0E8"/>
+  <!-- Right hairline diagonal -->
+  <polygon points="74.5,30 71.5,30 44.5,67 47.5,67" fill="#F4F0E8" opacity="0.88"/>
+
+  <!-- Interlaced Letter E: Vertical Spine -->
+  <path d="M 37,33 L 42,33 L 42,67 L 37,67 L 37,65 L 39.5,64.5 L 39.5,35.5 L 37,35 Z" fill="#F4F0E8"/>
+
+  <!-- Letter E: Top Arm & Terminal Serif -->
+  <path d="M 40.5,33 L 63,33 L 63,39 L 61,39 L 61,35.5 L 40.5,35.5 Z" fill="#F4F0E8"/>
+
+  <!-- Letter E: Middle Arm & Faceted Terminal -->
+  <polygon points="40.5,49 57,49 60,50.5 57,52 40.5,52" fill="#F4F0E8"/>
+
+  <!-- Letter E: Bottom Arm & Terminal Serif -->
+  <path d="M 40.5,64.5 L 63,64.5 L 63,61 L 65,61 L 65,67 L 40.5,67 Z" fill="#F4F0E8"/>
+
+  <!-- Signature French Accent Aigu (´) on the É in Deep Burgundy -->
+  <polygon points="49,24.5 57,17 59.5,18.5 51.5,26" fill="#C2506B"/>
+
+  <!-- Center Atelier Jewel Diamond -->
+  <polygon points="50,48.5 52,50.5 50,52.5 48,50.5" fill="#C2506B"/>
+</svg>

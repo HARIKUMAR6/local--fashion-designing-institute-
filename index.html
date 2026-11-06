@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MAISON ÉLAN — Fashion & Design Academy. Phase 2: Global Components & Design System." />
+    <title>MAISON ÉLAN | Fashion & Design Academy — Home 1</title>
+
+    <!-- Anti-flicker critical script: applies saved theme and direction prior to DOM rendering -->
+    <script>
+      (function () {
+        try {
+          const storedTheme = localStorage.getItem('maison-elan-theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = storedTheme === 'dark' || (!storedTheme && prefersDark) ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          const storedDir = localStorage.getItem('maison-elan-dir') || 'ltr';
+          document.documentElement.setAttribute('dir', storedDir);
+          document.documentElement.dir = storedDir;
+        } catch (e) {
+          console.warn('Initial theme/dir load error', e);
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts Preconnect & High-Performance Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled Tailwind CSS v4 Stylesheet -->
+    <link rel="stylesheet" href="./css/output.css" />
+
+    <!-- Application Script Entry Point -->
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-bg-primary text-text-primary antialiased flex flex-col">
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header (Public Variant - Home 1 Active) -->
+    <header id="site-header" data-variant="public" data-active-page="home-1"></header>
+
+    <!-- Main Content Shell -->
+    <main id="main-content" class="flex-1 py-16 sm:py-24">
+      <div class="container-standard space-y-16">
+        <!-- Page Identifier -->
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <span class="text-editorial-caption">PHASE 2 — GLOBAL COMPONENTS</span>
+          <h1 class="text-editorial-h1 font-serif text-text-primary">Home 1: Editorial Atelier</h1>
+          <p class="text-text-secondary text-body leading-relaxed">
+            Powered by MAISON ÉLAN’s global navigation, dropdown keyboard controls, accessible mobile drawer, and shared luxury button system.
+          </p>
+        </div>
+
+        <!-- Shared Component & Button System Verification -->
+        <section aria-labelledby="shared-buttons-heading" class="card-editorial space-y-8">
+          <div class="border-b border-border-subtle pb-6">
+            <span class="text-editorial-caption">Design System Specification</span>
+            <h2 id="shared-buttons-heading" class="text-xl font-serif font-bold text-text-primary mt-1">
+              Shared Luxury Button System
+            </h2>
+            <p class="text-sm text-text-secondary mt-1">
+              Standardized interactive controls with consistent padding, fluid typography, visible focus rings, and dark/light mode parity.
+            </p>
+          </div>
+
+          <!-- Button Variants Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Primary Button -->
+            <div class="p-6 bg-bg-surface-elevated border border-border-subtle rounded-xs space-y-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-text-muted block">Primary Button</span>
+              <button type="button" class="btn-primary w-full">
+                Explore Atelier
+              </button>
+              <button type="button" class="btn-primary w-full" disabled aria-disabled="true">
+                Disabled State
+              </button>
+            </div>
+
+            <!-- Secondary Button -->
+            <div class="p-6 bg-bg-surface-elevated border border-border-subtle rounded-xs space-y-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-text-muted block">Secondary Button</span>
+              <button type="button" class="btn-secondary w-full">
+                View Curriculum
+              </button>
+              <button type="button" class="btn-secondary w-full" disabled aria-disabled="true">
+                Disabled State
+              </button>
+            </div>
+
+            <!-- Outline Button -->
+            <div class="p-6 bg-bg-surface-elevated border border-border-subtle rounded-xs space-y-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-text-muted block">Outline Button</span>
+              <button type="button" class="btn-outline w-full">
+                Download Prospectus
+              </button>
+              <button type="button" class="btn-outline w-full" disabled aria-disabled="true">
+                Disabled State
+              </button>
+            </div>
+
+            <!-- Text / Link Button -->
+            <div class="p-6 bg-bg-surface-elevated border border-border-subtle rounded-xs space-y-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-text-muted block">Text Link Button</span>
+              <div class="flex flex-col items-start gap-2 pt-1">
+                <a href="courses.html" class="btn-link">
+                  <span>Learn Admissions</span> &rarr;
+                </a>
+                <a href="#disabled" class="btn-link" aria-disabled="true">
+                  <span>Archived Session</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Container Demonstration -->
+        <section aria-labelledby="containers-heading" class="space-y-6">
+          <div class="text-start">
+            <span class="text-editorial-caption">Layout Standards</span>
+            <h2 id="containers-heading" class="text-xl font-serif font-bold text-text-primary">
+              Responsive Container Constraints
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-bg-surface border border-border-subtle rounded-xs space-y-2">
+              <span class="font-serif font-bold text-base block text-text-primary">.container-editorial</span>
+              <span class="text-xs text-text-muted block font-mono">max-width: 1600px</span>
+              <p class="text-xs text-text-secondary">Used for full-bleed runway banners, high-impact header navigation, and extensive editorial showcases.</p>
+            </div>
+            <div class="p-6 bg-bg-surface border border-border-subtle rounded-xs space-y-2">
+              <span class="font-serif font-bold text-base block text-text-primary">.container-standard</span>
+              <span class="text-xs text-text-muted block font-mono">max-width: 1440px</span>
+              <p class="text-xs text-text-secondary">Standard balanced grid width for course overviews, faculty features, and curriculum modules.</p>
+            </div>
+            <div class="p-6 bg-bg-surface border border-border-subtle rounded-xs space-y-2">
+              <span class="font-serif font-bold text-base block text-text-primary">.container-narrow</span>
+              <span class="text-xs text-text-muted block font-mono">max-width: 960px</span>
+              <p class="text-xs text-text-secondary">Optimal editorial reading width for essay articles, admissions requirements, and single-column forms.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer (Public Variant) -->
+    <footer id="site-footer" data-variant="public"></footer>
+  </body>
+</html>

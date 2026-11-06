@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MAISON ÉLAN — Fashion & Design Academy. Student Portal Authentication Gateway." />
+    <title>MAISON ÉLAN | Fashion & Design Academy — Student Login</title>
+
+    <!-- Anti-flicker critical script: applies saved theme and direction prior to DOM rendering -->
+    <script>
+      (function () {
+        try {
+          const storedTheme = localStorage.getItem('maison-elan-theme');
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = storedTheme === 'dark' || (!storedTheme && prefersDark) ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          const storedDir = localStorage.getItem('maison-elan-dir') || 'ltr';
+          document.documentElement.setAttribute('dir', storedDir);
+          document.documentElement.dir = storedDir;
+        } catch (e) {
+          console.warn('Initial theme/dir load error', e);
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts Preconnect & High-Performance Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled Tailwind CSS v4 Stylesheet -->
+    <link rel="stylesheet" href="./css/output.css" />
+
+    <!-- Application Script Entry Point -->
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body class="min-h-screen bg-bg-primary text-text-primary antialiased flex flex-col justify-between">
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Minimal Auth Variant Header -->
+    <header id="site-header" data-variant="auth" data-active-page="login"></header>
+
+    <!-- Main Content Shell (Focused Auth Shell Layout) -->
+    <main id="main-content" class="flex-1 flex items-center justify-center py-16 sm:py-20 px-4">
+      <div class="w-full max-w-md space-y-8">
+        <!-- Auth Header Info -->
+        <div class="text-center space-y-2">
+          <span class="text-editorial-caption">STUDENT ATELIER GATEWAY</span>
+          <h1 class="text-editorial-h2 font-serif text-text-primary">Sign in to your Atelier</h1>
+          <p class="text-sm text-text-secondary">
+            Enter your academic credentials to access studio schedules and course archives.
+          </p>
+        </div>
+
+        <!-- Auth Shell Container -->
+        <div class="card-editorial space-y-6">
+          <div class="p-4 bg-bg-surface-elevated border border-border-subtle rounded-xs text-xs text-text-secondary text-start space-y-2">
+            <span class="font-bold text-text-primary uppercase tracking-wider block">Phase 2 Auth Shell Variant:</span>
+            <p>
+              This page utilizes the specialized <strong>Auth Layout Variant</strong>. Public marketing navigation is omitted to maintain focused authentication flow, while preserving the typography wordmark, return navigation, and zero-flicker theme/direction toggles.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <a href="dashboard.html" class="btn-primary w-full text-center">
+              Proceed to Student Dashboard &rarr;
+            </a>
+            <a href="index.html" class="btn-outline w-full text-center">
+              Return to Public Website
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Minimal Auth Variant Footer -->
+    <footer id="site-footer" data-variant="auth"></footer>
+  </body>
+</html>
